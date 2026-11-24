@@ -1,0 +1,6 @@
+.neon
+.env*
+!.env.example
+deploy.env
+node_modules/
+dist/

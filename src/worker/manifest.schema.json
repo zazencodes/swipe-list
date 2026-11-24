@@ -1,0 +1,29 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["status", "error_kind", "error", "title", "description", "tags", "author", "extracted_text", "assets"],
+  "properties": {
+    "status": { "type": "string", "enum": ["ok", "failed"] },
+    "error_kind": { "type": "string", "enum": ["none", "not_found", "login_required", "blocked", "nothing_to_keep", "other"] },
+    "error": { "type": "string" },
+    "title": { "type": "string" },
+    "description": { "type": "string" },
+    "tags": { "type": "array", "items": { "type": "string" } },
+    "author": { "type": "string" },
+    "extracted_text": { "type": "string" },
+    "assets": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["file", "role", "source_url", "caption"],
+        "properties": {
+          "file": { "type": "string", "description": "path relative to the working directory, inside out/" },
+          "role": { "type": "string", "enum": ["image", "video", "thumbnail", "screenshot"] },
+          "source_url": { "type": "string" },
+          "caption": { "type": "string" }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,19 @@
+[Unit]
+Description=Swipe List (API, CLI download and dashboard)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+User=swipe
+Group=swipe
+WorkingDirectory=/opt/swipe-list
+ExecStart=/usr/bin/node --env-file=/opt/swipe-list/.env --enable-source-maps dist/server.mjs
+Restart=always
+RestartSec=5
+NoNewPrivileges=true
+ProtectSystem=strict
+ProtectHome=true
+PrivateTmp=true
+
+[Install]
+WantedBy=multi-user.target

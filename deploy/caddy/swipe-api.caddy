@@ -1,0 +1,7 @@
+# Public agent API: credential-only endpoints and client downloads (agent listener).
+# The dashboard listener is never published here; it stays on the tailnet.
+# deploy.sh fills in the domain and port from deploy.env.
+__API_DOMAIN__ {
+	encode gzip
+	reverse_proxy 127.0.0.1:__AGENT_PORT__
+}
