@@ -15,6 +15,8 @@
   <a href="https://zazencodes.com/"><img src="https://img.shields.io/badge/made%20by-ZazenCodes-black" alt="Made by ZazenCodes"></a>
 </p>
 
+> **Part of [zstack](https://github.com/zazencodes/zstack)**, the agentic system I use to run ZazenCodes.
+
 A searchable library of design inspiration that your agents can use.
 
 Save a link or a screenshot from your phone, your Mac or the terminal, with a note
